@@ -1,12 +1,11 @@
 CoolClicker
 ===========
 http://liquid.fluidnode.com/coolclicker/
-Hosted on a Raspberry Pi
 ===========
 
-v0.5
+##v0.5##
 
-Changelog:
+###Changelog:###
 
 **v0.1** Initial version. Redoing the old version.
 
