@@ -1,6 +1,7 @@
 CoolClicker
 ===========
 http://liquid.fluidnode.com/coolclicker/
+Hosted on a Raspberry Pi
 ===========
 
 v0.5
