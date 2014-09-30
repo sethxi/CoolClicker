@@ -1,15 +1,15 @@
-version = 0.5;
+version = 0.6;
 
 var coolData = {
 	cools: 0,
 	cps: 0,
-	version: 0.5
+	version: version
 };
 
 var resetData = {
 	cools: 0,
 	cps: 0,
-	version: 0.5
+	version: version
 };
 
 inter=0;
@@ -124,6 +124,26 @@ function updateCPS(){
 	console.log("updated cps");
 }
 
+function enableDebug(){
+	document.getElementById("debugbutton").disabled=false;
+}
+
+function migrate(ver){
+	if(ver==1){
+		alert("Upgraded from old version. Resetting data.");
+		reset();
+	}
+	if(ver==0.4){
+		alert("Update: Added a + (whatever you bought) in the shop when you buy things.");
+		coolData.version=0.5;
+		saveData();
+	}
+	if(ver==0.5){
+		alert("Update: You can no longer simply \"use the debug menu\". Resetting data.");
+		reset();
+	}
+}
+
 function theInterval(){
 	inter++;
 	console.log("interval "+inter);
@@ -132,7 +152,8 @@ function theInterval(){
 			if(inter==2){
 				document.getElementById("version1").innerHTML = version;
 				document.getElementById("version2").innerHTML = version;
-				if(coolData.version<version){
+				if(coolData.version<version || coolData.version==1){
+					migrate(coolData.version);
 				}
 				if(coolData.version==1){
 						alert("Upgraded from old version. Data reset!");
@@ -150,15 +171,6 @@ function theInterval(){
 		}
 	}
 }
-
-/*   var hackedData = {
-     toast: 9282883,
-     tps: 999,
-     version: 3
-     };
-
-   localStorage["toast"]=JSON.stringify(hackedData);
-   */
 
 function openShop(){
 	var modal = $.UIkit.modal("#shop");

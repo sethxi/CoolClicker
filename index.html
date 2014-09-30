@@ -20,7 +20,7 @@
     <font face="verdana">
       <center><b><h1 id="broken" style="color:red"></h1></b></center>
 			<button class="uk-button uk-width-1-1 uk-button-large uk-button-primary" data-uk-tooltip title="Buy things to make you cooler!" data-uk-modal="{target:'#shop'}">Shop</button>
-			<button class="uk-button uk-width-1-1 uk-button-large uk-button-danger" data-uk-tooltip title="Don't touch this!" data-uk-modal="{target:'#debug'}">Debug</button>
+			<button id="debugbutton" class="uk-button uk-width-1-1 uk-button-large uk-button-danger" data-uk-tooltip title="Don't touch this!" disabled data-uk-modal="{target:'#debug'}">Debug</button>
 			<center>
 				<h1><br><span id="cools" class="uk-text-bold uk-text-success">LOADING</span><br><span id="cps" class="uk-text-bold uk-text-success">LOADING</span> <b><span class="uk-text-primary">c/s</span></b><br></h1>
 				<br><img src="cool.jpg"onclick="clickGlasses(true)" ontouchend="clickGlasses(false)" data-uk-tooltip title="Wear these to become cool!" align="center"><br>
@@ -29,7 +29,7 @@
 				<div class="uk-modal-dialog">
 					<a class="uk-modal-close uk-close"></a>
 					<ul class="uk-list-striped">
-						<h4 class="tm-article-subtitle"><b>Store</b> <span id ="recentbuy"></span></h4>
+						<h4 id="storeheader" class="tm-article-subtitle" onclick="enableDebug();"><b>Store</b> <span id ="recentbuy"></span></h4>
 						<li><button class="uk-button uk-button-success" type="button" onclick="buy('clicker')">Buy</button> <b>Clicker - The most basic form of clicking!: <br>(<span style="color:green&quot;">$1500 - +1cps</span>)</b></li>
 						<li><button class="uk-button uk-button-success" type="button" onclick="buy('swagger')">Buy</button> <b>Swagger - If you're cool you're probably have swag!: <br>(<span style="color:green&quot;">$3000 - +5cps</span>)</b></li>
 						<li><button class="uk-button uk-button-success" type="button" onclick="buy('Rudy')">Buy</button> <b>Rudy - Cool guy, hang out with him: <br>(<span style="color:green&quot;">$2000 - +3cps</span>)</b></li>
@@ -64,6 +64,8 @@
 						<b>v0.4</b> Update system, more balance.
 						<hr>
 						<b>v0.5</b> Added a + (whatever you bought) in the shop when you buy things.
+						<hr>
+						<b>v0.6</b> You can no longer simply "use the debug menu".
 						<hr>
 					</center>
 				</div>
