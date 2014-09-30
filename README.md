@@ -17,3 +17,5 @@ http://liquid.fluidnode.com/coolclicker/
 **v0.5** Added a + (whatever you bought) in the shop when you buy things.
 
 **v0.6** You can no longer simply "use the debug menu".
+
+**v0.7** Less console spam. Fixed errors when clicking glasses.
