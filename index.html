@@ -1,0 +1,79 @@
+
+<html class="uk-notouch">
+
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        changelog {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+    </style>
+    <title></title>
+    <link rel="stylesheet" href="css/uikit.almost-flat.css">
+    <script src="jquery.js"></script>
+    <script src="js/uikit.js"></script>
+    <script src="coolclicker.js"></script>
+</head>
+
+<body>
+    <font face="verdana">
+      <center><b><h1 id="broken" style="color:red"></h1></b></center>
+			<button class="uk-button uk-width-1-1 uk-button-large uk-button-primary" data-uk-tooltip title="Buy things to make you cooler!" data-uk-modal="{target:'#shop'}">Shop</button>
+			<button class="uk-button uk-width-1-1 uk-button-large uk-button-danger" data-uk-tooltip title="Don't touch this!" data-uk-modal="{target:'#debug'}">Debug</button>
+			<center>
+				<h1><br><span id="cools" class="uk-text-bold uk-text-success">LOADING</span><br><span id="cps" class="uk-text-bold uk-text-success">LOADING</span> <b><span class="uk-text-primary">c/s</span></b><br></h1>
+				<br><img src="cool.jpg"onclick="clickGlasses(true)" ontouchend="clickGlasses(false)" data-uk-tooltip title="Wear these to become cool!" align="center"><br>
+			</center>
+			<div id="shop" class="uk-modal">
+				<div class="uk-modal-dialog">
+					<a class="uk-modal-close uk-close"></a>
+					<ul class="uk-list-striped">
+						<h4 class="tm-article-subtitle"><b>Store</b> <span id ="recentbuy"></span></h4>
+						<li><button class="uk-button uk-button-success" type="button" onclick="buy('clicker')">Buy</button> <b>Clicker - The most basic form of clicking!: <br>(<span style="color:green&quot;">$1500 - +1cps</span>)</b></li>
+						<li><button class="uk-button uk-button-success" type="button" onclick="buy('swagger')">Buy</button> <b>Swagger - If you're cool you're probably have swag!: <br>(<span style="color:green&quot;">$3000 - +5cps</span>)</b></li>
+						<li><button class="uk-button uk-button-success" type="button" onclick="buy('Rudy')">Buy</button> <b>Rudy - Cool guy, hang out with him: <br>(<span style="color:green&quot;">$2000 - +3cps</span>)</b></li>
+						<li><button class="uk-button uk-button-success" type="button" onclick="buy('rapper')">Buy</button> <b>Rapper - These guys got the coolest beats: <br>(<span style="color:green&quot;">$5000 - +15cps</span>)</b></li>
+						<li><button class="uk-button uk-button-success" type="button" onclick="buy('sunglasses of eternal coolness')">Buy</button> <b>Sunglasses of Eternal Coolness - Coolest pair of shades ever: <br>(<span style="color:green&quot;">$5000000 - +1000000cps</span>)</b></li>
+					</ul>
+				</div>
+			</div>
+			<div id="debug" class="uk-modal">
+				<div class="uk-modal-dialog">
+					<a class="uk-modal-close uk-close"></a>
+					<center>
+						<button class="uk-button uk-button-primary" onclick="reset()">Reset Data</button>
+						<button class="uk-button uk-button-primary" onclick="addCools(100000)">Add $100000</button>
+					</center>
+				</div>
+			</div>
+			<div id="changelog" class="uk-modal">
+				<div class="uk-modal-dialog">
+					<a class="uk-modal-close uk-close"></a>
+					<center>
+						<h1>
+							Current Version: <b><span id="version2">LOADING</span></b>
+						</h1>
+						<hr>
+						<b>v0.1</b> Initial version. Redoing the old version.
+						<hr>
+						<b>v0.2</b> Implemented the actual core mechanics of the game, added shop and debug menu.
+						<hr>
+						<b>v0.3</b> Redone some of the menu system, still working on it.
+						<hr>
+						<b>v0.4</b> Update system, more balance.
+						<hr>
+						<b>v0.5</b> Added a + (whatever you bought) in the shop when you buy things.
+						<hr>
+					</center>
+				</div>
+			</div>
+			<div id="changelog">
+				<b>v<span id="version1">LOADING</span> <a data-uk-modal="{target:'#changelog'}">View Changelog</a></b>
+			</div>
+		</font>
+
+
+</body>
+
+</html>
