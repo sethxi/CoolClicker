@@ -1,5 +1,7 @@
 CoolClicker
 ===========
+http://liquid.fluidnode.com/coolclicker/
+===========
 
 v0.5
 
