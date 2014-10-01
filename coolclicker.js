@@ -1,4 +1,4 @@
-version = 0.6;
+version = 0.71;
 
 var coolData = {
 	cools: 0,
@@ -13,6 +13,7 @@ var resetData = {
 };
 
 inter=0;
+clk = false;
 
 var workers = {
 	//first = price, second = cps
@@ -83,7 +84,7 @@ function clickGlasses(touching){
 	if (!touching) {
 				clk = true;
 	}
-	if (touch && !touching) {
+	if (clk && !touching) {
 				event.preventDefault();
 				addCools(1);
 			} else if (!clk) {
@@ -116,12 +117,12 @@ function reset(){
 
 function updateCools(){
 	document.getElementById("cools").innerHTML = Math.round( getCools() );
-	console.log("updated cools");
+	
 }
 
 function updateCPS(){
 	document.getElementById("cps").innerHTML = getCPS();
-	console.log("updated cps");
+	
 }
 
 function enableDebug(){
@@ -146,7 +147,6 @@ function migrate(ver){
 
 function theInterval(){
 	inter++;
-	console.log("interval "+inter);
 	if(loaded){
 		if(inter>1){
 			if(inter==2){
