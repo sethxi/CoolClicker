@@ -4,7 +4,6 @@ http://liquid.fluidnode.com/coolclicker/
 ===========
 
 ###Changelog:###
-<<<<<<< HEAD
 
 **v0.1** Initial version. Redoing the old version.
 
