@@ -1,6 +1,6 @@
 CoolClicker v0.5
 ===========
-http://liquid.fluidnode.com/coolclicker/
+http://liqob.com/coolclicker
 ===========
 
 ###Changelog:###
