@@ -1,4 +1,5 @@
-CoolClicker v0.5
+<h1>CoolClicker v0.5</h1>
+<h2>Totally not a rip-off of Cookie Clicker.</h2>
 ===========
 http://liqob.com/coolclicker
 ===========
